@@ -1,559 +1,455 @@
 @charset "UTF-8";
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-    display: block;
-}
-body {
-    line-height: 1;
-}
-ol, ul {
-    list-style: none;
-}
-blockquote, q {
-    quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content: '';
-    content: none;
-}
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-/* End CSS Reset */
+html,body,div,h1,h2,a{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}body{line-height:1;}/* End CSS Reset */
 
 @font-face {
     font-family: 'AkbarPlain';
-    src: url('../assets/akbar-webfont.eot');
-    src: url('../assets/akbar-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../assets/akbar-webfont.woff') format('woff'),
-         url('../assets/akbar-webfont.ttf') format('truetype'),
-         url('../assets/akbar-webfont.svg#AkbarPlain') format('svg');
+    src: url(../assets/akbar-webfont.eot);
+    src:url(../assets/akbar-webfont.eot?#iefix) format(embedded-opentype),
+         url(../assets/akbar-webfont.woff) format(woff),
+         url(../assets/akbar-webfont.ttf) format(truetype),
+         url(../assets/akbar-webfont.svg#AkbarPlain) format(svg);
     font-weight: normal;
     font-style: normal;
 }
 
-html { 
-    font-size: 62.5%;
-    background: rgb(197,222,234) no-repeat center center fixed;
-    background: -moz-linear-gradient(-45deg,  rgba(197,222,234,1) 0%, rgba(138,187,215,1) 31%, rgba(6,109,171,1) 100%) no-repeat center center fixed;
-    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(197,222,234,1)), color-stop(31%,rgba(138,187,215,1)), color-stop(100%,rgba(6,109,171,1))) no-repeat center center fixed;
-    background: -webkit-linear-gradient(-45deg,  rgba(197,222,234,1) 0%,rgba(138,187,215,1) 31%,rgba(6,109,171,1) 100%) no-repeat center center fixed;
-    background: -o-linear-gradient(-45deg,  rgba(197,222,234,1) 0%,rgba(138,187,215,1) 31%,rgba(6,109,171,1) 100%) no-repeat center center fixed;
-    background: -ms-linear-gradient(-45deg,  rgba(197,222,234,1) 0%,rgba(138,187,215,1) 31%,rgba(6,109,171,1) 100%) no-repeat center center fixed;
-    background: linear-gradient(-45deg,  rgba(197,222,234,1) 0%,rgba(138,187,215,1) 31%,rgba(6,109,171,1) 100%) no-repeat center center fixed;
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c5deea', endColorstr='#066dab',GradientType=1 );
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    background: -moz-linear-gradient(-45deg,  #8abbd7 0%, #066dab 100%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#8abbd7), color-stop(100%,#066dab));
+    background: -webkit-linear-gradient(-45deg,  #8abbd7 0%,#066dab 100%);
+    background: -o-linear-gradient(-45deg,  #8abbd7 0%,#066dab 100%);
+    background: -ms-linear-gradient(-45deg,  #8abbd7 0%,#066dab 100%);
+    background: linear-gradient(135deg,  #8abbd7 0%,#066dab 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8abbd7', endColorstr='#066dab',GradientType=1 );
     -webkit-background-size: cover;
-    -moz-background-size: cover;
     background-size: cover;
 }
 
+body, a {
+    color: #FFFFFF;
+}
+
 body { 
-    color: #FFFFFF;
     text-align: center;
-    font: 1.6rem/4rem 'AkbarPlain', Helvetica, Arial, sans-serif;
+    font: 1em/3em 'AkbarPlain', Helvetica, Arial, sans-serif;
 }
 
-h1 { font-size: 4rem }
-h2 { font-size: 3rem }
+h1 { font-size: 3em }
+h2 { font-size: 2em }
 
-a:link, a:visited {
-    text-decoration: none;
+a:link, a:visited { text-decoration: none }
+
+
+
+.brow, .ear, .eye, .hair, .mouth, .mouth::after, .neck, .nose, .skull, .smile { 
+    border: 0.3em solid #000000;
+}
+
+.brow, .brow::after, .ear, .ear::after, .hair::after, .hair:first-child::before, .neck, .neck::before, .nose, .skull {
+    background-color: #FCDB00;
+}
+
+.brow::after, .ear .inner::after, .ear::after, .eye::after, .hair::after, .hair:first-child::before, .homer div, .m-hair::before, .mouth::after, .mouth::before, .neck::before, .nose::after, .smile::after, .smile::before {
+    position: absolute;
+}
+
+.brow, .hair, .neck, .skull {
+    border-bottom: none;
+}
+
+.ear .inner, .hair {
+    border-top: 0.3em solid #000000;
+}
+
+.eye::after, .eye.right, .ear, .ear .inner, .ear .inner::after {
+    border-radius: 100%;
+}
+
+.hair:first-child::before, .hair::after, .brow::after, .eye::after, .nose::after, .mouth::before, .mouth::after, .smile::before, .smile::after, .ear::after, .ear .inner::after, .neck::before, .m-hair::before {
+    content: '';
     display: block;
-    color: #FFFFFF;
 }
 
-.container {
-    max-width: 96rem;
+.hair, .ear .inner::after, .m-hair, .m-hair::before {
+    border-left: 0.3em solid #000000;
+}
+
+.hair, .mouth::before, .neck::before {
+    border-right: 0.3em solid #000000;
+}
+
+
+.container, .homer {
     margin: auto;
 }
 
-    .homer {
-        margin: auto;
-        height: 32.6rem;
-        width: 26rem;
-        position: relative;
+.container {
+    max-width: 96em;
+}
+
+.homer {
+    height: 32.6em;
+    width: 26em;
+    position: relative;
+}
+
+
+    .top-hair,
+    .eye.right {
+        left: 5.4em;
     }
 
-        .homer div {
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-            display: block;
-            position: absolute;
-        }
-
-        .skull, .brow, .nose, .ear, .neck, .hair, .eye, .mouth, .mouth:after, .smile { 
-            border: 0.3rem solid #000000;
-        }
+    .top-hair,
+    .ear .inner {
+        top: 0.4em;
+    }
 
         .top-hair {
+            height: 3.7em;
             -webkit-transform: rotate(-28deg);
             -moz-transform: rotate(-28deg);
             -o-transform: rotate(-28deg);
             -ms-transform: rotate(-28deg);
             transform: rotate(-28deg);
-            height: 3.7rem;
-            left: 5.4rem;
-            top: 0.4rem;
-            width: 7.7rem;
-            z-index: 50;
+            width: 7.7em;
+            z-index: 20;
         }
 
         .hair {
             background-color: transparent;
-            border-bottom: none;
-            border-left: 0.3rem solid #000000;
-            border-right: 0.3rem solid #000000;
-            -webkit-border-top-left-radius: 50% 100%;
-            -moz-border-radius-topleft: 50% 100%;
-            border-top-left-radius: 50% 100%;
-            -webkit-border-top-right: 50% 100%;
-            -moz-border-radius-topright: 50% 100%;
-            border-top-right-radius: 50% 100%;
-            border-top: 0.3rem solid #000000;
-            height: 2.7rem;
-            width: 5.3rem;
+            border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+            height: 2.7em;
+            width: 5.3em;
+        }
+
+        .hair:first-child::before,
+        .hair::after {
+            bottom: -0.1em;
         }
 
             .hair:nth-child(2) {
-                left: 1.9rem;
-                top: 0.7rem;
-                width: 5.1rem
+                left: 1.9em;
+                top: 0.7em;
+                width: 5.1em
             }
 
-            .hair:first-child:before {
+            .hair:first-child::before {
+                height: 0.4em;
+                right: -0.3em;
                 -webkit-transform: rotate(22deg);
                 -moz-transform: rotate(22deg);
                 -o-transform: rotate(22deg);
                 -ms-transform: rotate(22deg);
                 transform: rotate(22deg);
-                background-color: #FCDB00;
-                bottom: -0.1rem;
-                content: '';
-                display: block;
-                height: 0.4rem;
-                position: absolute;
-                right: -0.3rem;
-                width: 0.5rem;
+                width: 0.5em;
             }
 
-            .hair:after {
-                background-color: #FCDB00;
-                bottom: -0.1rem;
-                content: '';
-                display: block;
-                height: 0.2rem;
+            .hair::after,
+            .nose::after {
                 left: 0;
-                position: absolute;
+            }
+
+            .hair::after {
+                height: 0.2em;
                 width: 100%;
             }
 
         .skull {
+            border-top-left-radius: 6.8em 6.8em;
+            border-top-right-radius: 6.8em 6.6em;
+            height: 14.2em;
+            left: 4em;
+            top: 1.9em;
             -webkit-transform: rotate(-20deg);
             -moz-transform: rotate(-20deg);
             -o-transform: rotate(-20deg);
             -ms-transform: rotate(-20deg);
             transform: rotate(-20deg);
-            background-color: #FCDB00;
-            border-bottom: none;
-            -webkit-border-top-left-radius: 6.8rem 6.8rem;
-            -moz-border-radius-topleft: 6.8rem 6.8rem;
-            border-top-left-radius: 6.8rem 6.8rem;
-            -webkit-border-top-right-radius: 6.8rem 6.6rem;
-            -moz-border-radius-topright: 6.8rem 6.6rem;
-            border-top-right-radius: 6.8rem 6.6rem;
-            height: 14.2rem;
-            left: 4rem;
-            top: 1.9rem;
-            width: 14rem;
+            width: 14em;
             z-index: 5;
         }
 
         .face {
-            top: 9rem;
-            left: 8.6rem;
-            z-index: 100;
+            left: 8.6em;
+            top: 9em;
+            z-index: 30;
+        }
+
+        .brow,
+        .mouth::after,
+        .nose {
+            border-left: none;
+        }
+
+        .brow::after,
+        .mouth::before {
+            height: 1.5em;
+        }
+
+        .brow::after,
+        .smile::after {
+            left: -0.3em;
+        }
+
+        .brow::after,
+        .smile::before {
+            top: -0.3em;
         }
 
             .brow {
-                background-color: #FCDB00;
-                -webkit-border-bottom-right-radius: 100%;
-                -moz-border-radius-bottomright: 100%;
-                border-bottom-right-radius: 100%;
-                border-bottom: none;
-                border-left: none;
-                -webkit-border-top-left-radius: 100%;
-                -moz-border-radius-topleft: 100%;
-                border-top-left-radius: 100%;
-                -webkit-border-top-right-radius: 100%;
-                -moz-border-radius-topright: 100%;
-                border-top-right-radius: 100%;
-                height: 2.6rem;
-                left: 8.4rem;
-                width: 2.4rem;
+                border-radius: 0 100% 100%;
+                height: 2.6em;
+                left: 8.4em;
+                width: 2.4em;
             }
 
-                .brow:after {
-                    background-color: #FCDB00;
-                    content: '';
-                    display: block;
-                    height: 1.5rem;
-                    left: -0.3rem;
-                    position: absolute;
-                    top: -0.3rem;
-                    width: 1.3rem;
+                .brow::after {
+                    width: 1.3em;
                 }
 
         .eye {
-            top: 1.1rem;
+            top: 1.1em;
+            background-color: #FFFFFF;
         }
 
-            .eye:after {
+            .eye::after {
                 background-color: #000000;
-                -webkit-border-radius: 100%;
-                -moz-border-radius: 100%;
-                border-radius: 100%;
-                content: '';
-                display: block;
-                position: absolute;
-                z-index: 60;
+                height: 0.8em;
+                width: 0.8em;
+                z-index: 25;
             }
 
             .eye.left {
-                background-color: #FFFFFF;
-                -webkit-border-bottom-left-radius: 3.7rem 3.5rem;
-                -moz-border-radius-bottomleft: 3.7rem 3.5rem;
-                border-bottom-left-radius: 3.7rem 3.5rem;
-                -webkit-border-bottom-right-radius: 3.6rem 3.5rem;
-                -moz-border-radius-bottomright: 3.6rem 3.5rem;
-                border-bottom-right-radius: 3.6rem 3.5rem;
-                -webkit-border-top-left-radius: 3.7rem 3.5rem;
-                -moz-border-radius-topleft: 3.7rem 3.5rem;
-                border-top-left-radius: 3.7rem 3.5rem;
-                -webkit-border-top-right-radius: 3.5rem 3.3rem;
-                -moz-border-radius-topright: 3.5rem 3.3rem;
-                border-top-right-radius: 3.5rem 3.3rem;
-                height: 6.7rem;
-                width: 7.1rem;
-                z-index: 50;
+                border-radius: 3.7em 3.5em 3.6em 3.7em / 3.5em 3.3em 3.5em 3.5em;
+                height: 6.7em;
+                width: 7.1em;
+                z-index: 20;
             }
 
-                .eye.left:after {
-                    height: 0.8rem;
-                    left: 1.7rem;
-                    top: 2.9rem;
-                    width: 0.8rem;
+                .eye.left::after {
+                    left: 1.7em;
+                    top: 2.9em;
                 }
 
             .eye.right {
-                background-color: #FFFFFF;
-                -webkit-border-radius: 100%;
-                -moz-border-radius: 100%;
-                border-radius: 100%;
-                height: 6.3rem;
-                left: 5.4rem;
-                width: 6.3rem;
-                z-index: 45;
+                height: 6.3em;
+                width: 6.3em;
+                z-index: 10;
             }
 
-
-                .eye.right:after {
-                    height: 0.8rem;
-                    left: 3rem;
-                    top: 2.7rem;
-                    width: 0.8rem;
+                .eye.right::after {
+                    left: 3em;
+                    top: 2.7em;
                 }
 
         .nose {
-            background-color: #FCDB00;
-            border-left: none;
-            -webkit-border-radius: 3rem;
-            -moz-border-radius: 3rem;
-            border-radius: 3rem;
-            height: 3.1rem;
-            left: 4.1rem;
-            top: 5.5rem;
+            border-radius: 3em;
+            height: 3.1em;
+            left: 4.1em;
+            top: 5.5em;
             -webkit-transform: rotate(-2deg);
             -moz-transform: rotate(-2deg);
             -o-transform: rotate(-2deg);
             -ms-transform: rotate(-2deg);
             transform: rotate(-2deg);
-            width: 6.5rem;
-            z-index: 48;
+            width: 6.5em;
+            z-index: 15;
         }
 
-            .nose:after {
+        .neck::before,
+        .nose::after {
+            bottom: 0;
+        }
+
+        .nose::after,
+        .smile::after {
+            height: 1em;
+        }
+
+        .nose::after,
+        .m-hair,
+        .m-hair::before {
+            width: 2em;
+        }
+
+
+            .nose::after {
                 background: #FCDB00;
-                bottom: 0;
-                content: '';
-                display: block;
-                height: 1rem;
-                left: 0;
-                position: absolute;
-                width: 2rem;
+            }
+            .mouth,
+            .mouth::before,
+            .mouth::after,
+            .smile,
+            .smile::before {
+                background-color: #BEAE7D;
             }
 
         .mouth {
-            background-color: #BEAE7D;
-            -webkit-border-bottom-left-radius: 4.8rem 4.2rem;
-            -moz-border-radius-bottomleft: 4.8rem 4.2rem;
-            border-bottom-left-radius: 4.8rem 4.2rem;
-            -webkit-border-bottom-right-radius: 3.6rem 2.8rem;
-            -moz-border-radius-bottomright: 3.6rem 2.8rem;
-            border-bottom-right-radius: 3.6rem 2.8rem;
-            -webkit-border-top-left-radius: 5.8rem 4.9rem;
-            -moz-border-radius-topleft: 5.8rem 4.9rem;
-            border-top-left-radius: 5.8rem 4.9rem;
-            height: 9.2rem;
-            left: 0.2rem;
-            top: 8.3rem;
-            width: 7.9rem;
+            border-radius: 5.8em 0 3.6em 4.8em / 4.9em 0 2.8em 4.2em;
+            height: 9.2em;
+            left: 0.2em;
+            top: 8.3em;
+            width: 7.9em;
         }
 
-            .mouth:before {
-                background-color: #BEAE7D;
-                -webkit-border-bottom-right-radius: 1.6rem 1.5rem;
-                -moz-border-radius-bottomright: 1.6rem 1.5rem;
-                border-bottom-right-radius: 1.6rem 1.5rem;
-                border-bottom: 0.3rem solid #000000;
-                border-right: 0.3rem solid #000000;
-                bottom: 1.7rem;
-                content: '';
-                display: block;
-                height: 1.4rem;
-                left: 7.3rem;
-                position: absolute;
-                width: 1.6rem;
-                z-index: 5000;
+        .mouth::before,
+        .mouth::after {
+            left: 7.3em;
+        }
+
+
+            .mouth::before {
+                border-bottom-right-radius: 1.6em 1.5em;
+                border-bottom: 0.3em solid #000000;
+                bottom: 1.7em;
+                width: 1.6em;
+                z-index: 40;
             }
 
-            .mouth:after {
-                background-color: #BEAE7D;
-                -webkit-border-bottom-right-radius: 4rem 1.5rem;
-                -moz-border-radius-bottomright: 4rem 1.5rem;
-                border-bottom-right-radius: 4rem 1.5rem;
-                border-left: none;
-                -webkit-border-top-right-radius: 4rem 4.5rem;
-                -moz-border-radius-topright: 4rem 4.5rem;
-                border-top-right-radius: 4rem 4.5rem;
-                content: '';
-                display: block;
-                height: 6.4rem;
-                left: 7.3rem;
-                position: absolute;
-                top: -1.7rem;
-                width: 4.2rem;
+            .mouth::after {
+                border-radius: 0 4em 4em 0 / 0 4.5em 1.5em 0;
+                height: 6.4em;
+                top: -1.7em;
+                width: 4.2em;
             }
 
         .smile {
-            background-color: #BEAE7D;
-            -webkit-border-radius: 50%;
-            -moz-border-radius: 50%;
             border-radius: 50%;
-            height: 3.3rem;
-            left: 1.3rem;
-            top: 2.2rem;
-            width: 11rem;
-            z-index: 5000;
+            height: 3.3em;
+            left: 1.3em;
+            top: 2.2em;
+            width: 11em;
+            z-index: 45;
+        }
+
+        .smile::after,
+        .ear::after {
+            width: 1em;
         }
 
 
-            .smile:before {
-                background-color: #BEAE7D;
-                content: '';
-                display: block;
-                height: 2rem;
-                left: -0.4rem;
-                position: absolute;
-                top: -0.3rem;
-                width: 10.2rem;
+            .smile::before {
+                height: 2em;
+                left: -0.4em;
+                width: 10.2em;
             }
 
-            .smile:after {
-            -moz-transform: rotate(37deg);
-            -ms-transform: rotate(37deg);
-            -o-transform: rotate(37deg);
-            -webkit-transform: rotate(37deg);
-            -webkit-border-bottom-left-radius: 0.4rem;
-            -moz-border-radius-bottomleft: 0.4rem;
-            border-bottom-left-radius: 0.4rem;
-            border-left: 0.3rem solid #000000;
-            -webkit-border-top-left-radius: 0.4rem;
-            -moz-border-radius-topleft: 0.4rem;
-            border-top-left-radius: 0.4rem;
-            content: '';
-            display: block;
-            height: 1.3rem;
-            left: -0.4rem;
-            position: absolute;
-            top: 1.7rem;
-            transform: rotate(37deg);
-            width: 2rem;
+            .smile::after {
+                border-color: #BEAE7D transparent #BEAE7D #000000;
+                border-radius: 0.4em 0 0 0.4em;
+                border-style: solid;
+                border-width: 0.1em 0 0.1em 0.3em;
+                top: 1.5em;
+                -webkit-transform: rotate(37deg);
+                -moz-transform: rotate(37deg);
+                -ms-transform: rotate(37deg);
+                -o-transform: rotate(37deg);
+                transform: rotate(37deg);
             }
 
         .ear {
-            background-color: #FCDB00;
-            -webkit-border-radius: 100%;
-            -moz-border-radius: 100%;
-            border-radius: 100%;
-            height: 3.2rem;
-            left: 5.3rem;
-            top: 16.6rem;
-            width: 3.2rem;
-            z-index: 160;
+            height: 3.2em;
+            left: 5.3em;
+            top: 16.6em;
+            width: 3.2em;
+            z-index: 35;
         }
 
-            .ear:after {
+        .ear .inner, .ear .inner::after {
+            left: 0.4em;
+        }
+
+            .ear::after {
+                height: 3.5em;
+                right: -0.6em;
+                top: -0.2em;
+                -webkit-transform: rotate(-4deg);
                 -moz-transform: rotate(-4deg);
                 -ms-transform: rotate(-4deg);
                 -o-transform: rotate(-4deg);
-                -webkit-transform: rotate(-4deg);
-                background-color: #FCDB00;
-                content: '';
-                display: block;
-                height: 3.5rem;
-                position: absolute;
-                right: -0.6rem;
-                top: -0.2rem;
                 transform: rotate(-4deg);
-                width: 1rem;
             }
 
-            .ear-inner {
+            .ear .inner {
+                height: 1.8em;
+                -webkit-transform: rotate(10deg);
                 -moz-transform: rotate(10deg);
                 -ms-transform: rotate(10deg);
                 -o-transform: rotate(10deg);
-                -webkit-transform: rotate(10deg);
-                -webkit-border-radius: 100%;
-                -moz-border-radius: 100%;
-                border-radius: 100%;
-                border-top: 0.3rem solid #000000;
-                display: block;
-                height: 1.8rem;
-                left: 0.4rem;
-                position: absolute;
-                top: 0.4rem;
                 transform: rotate(10deg);
-                width: 1.8rem;
+                width: 1.8em;
             }
 
-            .ear-inner:after {
+            .ear .inner::after {
+                height: 1.2em;
+                top: 0;
+                -webkit-transform: rotate(25deg);
                 -moz-transform: rotate(25deg);
                 -ms-transform: rotate(25deg);
                 -o-transform: rotate(25deg);
-                -webkit-transform: rotate(25deg);
-                border-left: 0.3rem solid #000000;
-                -webkit-border-radius: 100%;
-                -moz-border-radius: 100%;
-                border-radius: 100%;
-                content: '';
-                display: block;
-                height: 1.2rem;
-                left: 0.4rem;
-                position: absolute;
-                top: 0;
                 transform: rotate(25deg);
-                width: 1.2rem;
+                width: 1.2em;
             }
 
 
         .neck {
+            border-top: none;
+            height: 13em;
+            left: 6.6em;
+            top: 15em;
+            -webkit-transform: rotate(7deg);
             -moz-transform: rotate(7deg);
             -ms-transform: rotate(7deg);
             -o-transform: rotate(7deg);
-            -webkit-transform: rotate(7deg);
-            background-color: #FCDB00;
-            border-bottom: none;
-            border-top: none;
-            height: 13rem;
-            left: 6.6rem;
-            top: 15rem;
             transform: rotate(7deg);
-            width: 8.2rem;
+            width: 8.2em;
         }
 
-            .neck:before {
+            .neck::before {
+                height: 3em;
+                right: -1.4em;
+                -webkit-transform: rotate(7deg) skewX(20deg);
                 -moz-transform: rotate(7deg) skewX(20deg);
                 -ms-transform: rotate(7deg) skewX(20deg);
                 -o-transform: rotate(7deg) skewX(20deg);
-                -webkit-transform: rotate(7deg) skewX(20deg);
-                background-color: #FCDB00;
-                border-right: 0.3rem solid #000000;
-                bottom: 0;
-                content: '';
-                height: 3rem;
-                position: absolute;
-                right: -1.4rem;
                 transform: rotate(7deg) skewX(20deg);
-                width: 7rem;
+                width: 7em;
             }
 
+        .m-hair,
+        .m-hair::before {
+            border-top: 0.4em solid #000000;
+            border-top-left-radius: 0.8em;
+            height: 2.4em;
+        }
+
         .m-hair {
+            left: 4.4em;
+            top: 14.7em;
+            -webkit-transform: skewY(47deg);
             -moz-transform: skewY(47deg);
             -ms-transform: skewY(47deg);
             -o-transform: skewY(47deg);
-            -webkit-transform: skewY(47deg);
-            border-left: 0.3rem solid #000000;
-            -webkit-border-top-left-radius: 0.8rem;
-            -moz-border-radius-topleft: 0.8rem;
-            border-top-left-radius: 0.8rem;
-            border-top: 0.4rem solid #000000;
-            height: 2.4rem;
-            left: 4.4rem;
-            top: 14.7rem;
             transform: skewY(47deg);
-            width: 2rem;
-            z-index: 100;
+            z-index: 35;
         }
 
-        .m-hair:before {
-            -moz-transform: translate(-0.2rem, -0.4rem);
-            -ms-transform: translate(-0.2rem, -0.4rem);
-            -o-transform: translate(-0.2rem, -0.4rem);
-            -webkit-transform: translate(-0.2rem, -0.4rem);
-            border-left: 0.3rem solid #000000;
-            -webkit-border-top-left-radius: 0.8rem;
-            -moz-border-radius-topleft: 0.8rem;
-            border-top-left-radius: 0.8rem;
-            border-top: 0.4rem solid #000000;
-            content: '';
-            height: 2.4rem;
+        .m-hair::before {
             left: 100%;
-            position: absolute;
-            top: -2rem;
-            transform: translate(-0.2rem, -0.4rem);
-            width: 2rem;
+            top: -2em;
+            -webkit-transform: translate(-0.2em, -0.4em);
+            -moz-transform: translate(-0.2em, -0.4em);
+            -ms-transform: translate(-0.2em, -0.4em);
+            -o-transform: translate(-0.2em, -0.4em);
+            transform: translate(-0.2em, -0.4em);
         }
 
         .author {
-            margin-top: 2rem;
+            margin-top: 2em;
         }
